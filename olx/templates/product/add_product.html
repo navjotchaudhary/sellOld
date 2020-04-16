@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+	<!-- Submit Ad -->
+	{% block body %}
+	<div class="submit-ad main-grid-border">
+		<div class="container">
+			<h2 class="head">Post an Ad</h2>
+			<div class="post-ad-form">
+				<form method = 'POST' action = ''>
+					{% csrf_token %}
+					<label>Select Category <span>*</span></label>
+					<select class="" name = 'category'>
+					  <option>Select Category</option>
+					  {% for category in categories %}
+					  <option>{{category}}</option>
+					 {% endfor %}
+					</select>
+					<br />
+					<label>Select brand <span>*</span></label>
+					<select class="" name = 'brand'>
+					  <option>Select Brand</option>
+					  {% for category in brands %}
+					  <option>{{category}}</option>
+					 {% endfor %}
+					</select>
+					<div class="clearfix"></div>
+					<label>Ad Title <span>*</span></label>
+					<input type="text" class="phone" placeholder="product Name Here....." name = 'productName'>
+					<div class="clearfix"></div>
+					<label>Ad Description <span>*</span></label>
+					<textarea class="mess" placeholder="Write few lines about your product" name = 'productDescription'></textarea>
+					<div class="clearfix"></div>
+				<div class="upload-ad-photos">
+				<label>Photos for your ad :</label>	
+					<div class="photos-upload-view">
+						
+						<input type="file" id="MAX_FILE_SIZE" name="fileselect" accept = 'images/*' value="300000" />
+
+						
+
+						
+
+						
+						<div id="messages">
+						<p>Status Messages</p>
+						</div>
+						</div>
+					<div class="clearfix"></div>
+						<script src="{% static 'js/filedrag.js' %}"></script>
+				</div>
+				<label>Select condition <span>*</span></label>
+				<select class="" name = 'productCondition'>
+				  <option>Select condition</option>
+				  
+				  <option>New</option>
+				  <option>Used</option>
+				 
+				</select>
+				<div class="c
+
+					<div class="personal-details">
+						
+						<label>price <span>*</span></label>
+						<input type="text" class="name" placeholder="" name = 'price'>
+						
+						<div class="clearfix"></div>
+						<label>Your Name <span>*</span></label>
+						<input type="text" disabled = True class="name" placeholder="" value = {{user}}>
+						
+						<div class="clearfix"></div>
+						<label>Your Email Address<span>*</span></label>
+						<input type="text" class="email" placeholder="" disabled = True value = {{user.email}}>
+						<div class="clearfix"></div>
+						<p class="post-terms">By clicking <strong>post Button</strong> you accept our <a href="terms.html" target="_blank">Terms of Use </a> and <a href="privacy.html" target="_blank">Privacy Policy</a></p>
+					<input type="submit" value="Post">					
+					<div class="clearfix"></div>
+					</form>
+					</div>
+			</div>
+		</div>	
+	</div>
+	{% endblock %}

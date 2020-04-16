@@ -1,0 +1,11 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: registered
+From: b.20.python.01.02@gmail.com
+To: b.20.python.01.02@gmail.com
+Date: Thu, 16 Apr 2020 15:45:34 -0000
+Message-ID: <158705193443.3981.687303063407921786@navjot-Aspire-E5-553G>
+
+you r {'domain': 'domain', 'site_name': <django.contrib.sites.requests.RequestSite object at 0x7f006068ae80>, 'token': '5fp-75ec9c513041d3b6ff99', 'uid': 'MTY', 'user': <User: rghrsdthdry>}
+-------------------------------------------------------------------------------
